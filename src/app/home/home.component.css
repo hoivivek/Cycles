@@ -1,7 +1,49 @@
-.form-background {
-    background-image: url('https://drive.google.com/file/d/1J4y3DMcG037TZKBlYq_H3CyTdgGRLGBX/view?usp=sharing');
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    border-radius: 10px;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
 }
+
+.signup-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url('/src/assets/images/background.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-label {
+  color: #555;
+  text-align: left;
+  width: 100%;
+}
+
+.form-control-sm {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn {
+  width: 100%;
+}
+  

@@ -1,0 +1,37 @@
+<main>
+  
+  
+  <div class="content">
+    <div class="left-panel">
+      <div class="cycle-indicator">
+        <div class="cycle-day"></div>
+        <div class="cycle-stage"></div>
+      </div>
+      <div class="today-button">Today</div>
+    </div>
+    
+    <div class="calendar">
+      <div class="month-nav">
+        <button (click)="prevMonth()">&lt;</button>
+        <div class="month">{{ monthNames[currentMonth] }} {{ currentYear }}</div>
+        <button (click)="nextMonth()">&gt;</button>
+      </div>
+      <div class="calendar-grid">
+        <div class="day-label">S</div>
+        <div class="day-label">M</div>
+        <div class="day-label">T</div>
+        <div class="day-label">W</div>
+        <div class="day-label">T</div>
+        <div class="day-label">F</div>
+        <div class="day-label">S</div>
+        <div *ngFor="let day of days" [class.empty]="day === 0" [class.menstrual]="day !== 0 && isMenstrual(day)" [class.follicular]="day !== 0 && isFollicular(day)" [class.ovulation]="day !== 0 && isOvulation(day)" [class.luteal]="day !== 0 && isLuteal(day)">
+          {{ day !== 0 ? day : '' }}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+

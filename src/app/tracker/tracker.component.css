@@ -1,0 +1,156 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+  background-color: #f0f0f0;
+}
+
+
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 900px;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*.cycle-indicator {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff6347 0% 25%, 
+    #ffa500 25% 50%, 
+    #1e90ff 50% 75%, 
+    #7fffd4 75% 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #333;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}*/
+
+.cycle-indicator {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cycle-indicator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #ff6347; /* red */
+  border-right-color: #ffa500; /* orange */
+  border-bottom-color: #1e90ff; /* blue */
+  border-left-color: #7fffd4; /* aquamarine */
+  box-sizing: border-box;
+}
+
+
+
+.cycle-day {
+  font-size: 36px;
+}
+
+.today-button {
+  padding: 10px 50px;
+  background-color: skyblue;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.calendar {
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.month-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.month-nav button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.calendar-grid .day-label {
+  text-align: center;
+  font-weight: bold;
+}
+
+.calendar-grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.calendar-grid .empty {
+  visibility: hidden;
+}
+
+.calendar-grid .menstrual {
+  background-color: #ff6347;
+}
+
+.calendar-grid .follicular {
+  background-color: #ffa500;
+}
+
+.calendar-grid .ovulation {
+  background-color: #1e90ff;
+}
+
+.calendar-grid .luteal {
+  background-color: #7fffd4;
+}
