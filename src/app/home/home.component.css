@@ -10,11 +10,10 @@ main {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url('/src/assets/images/background.png');
   background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .form-container {
@@ -27,7 +26,28 @@ main {
   text-align: center;
 }
 
-h2 {
+.login-container {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  bottom: 400px;
+  text-align: center;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  width: 50%;
+}
+
+.or {
+  position: absolute;
+  top: 180px;
+  right: 280px;
+  text-align: center;
+}
+
+h4 {
   margin-bottom: 20px;
   color: #333;
 }

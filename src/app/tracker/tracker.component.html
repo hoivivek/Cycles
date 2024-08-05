@@ -1,13 +1,12 @@
 <main>
-  
-  
+<H2>DAILY TRACKER</H2>
   <div class="content">
     <div class="left-panel">
       <div class="cycle-indicator">
         <div class="cycle-day"></div>
         <div class="cycle-stage"></div>
       </div>
-      <div class="today-button">Today</div>
+      <div id="todayButton" class="today-button" (click)="openPopover()">Today</div>
     </div>
     
     <div class="calendar">
@@ -30,6 +29,9 @@
       </div>
     </div>
   </div>
+
+ 
+  
 </main>
 
 

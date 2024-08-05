@@ -1,47 +1,32 @@
 main {
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
   align-items: center;
-  padding: 100px;
+  padding: 20px;
   background-color: #f0f0f0;
 }
 
-
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 .content {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  background-color: #f0f0f0;
 }
 
 .left-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
 }
-
-/*.cycle-indicator {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: conic-gradient(
-    #ff6347 0% 25%, 
-    #ffa500 25% 50%, 
-    #1e90ff 50% 75%, 
-    #7fffd4 75% 100%
-  );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #333;
-  font-weight: bold;
-  font-size: 24px;
-  margin-bottom: 20px;
-}*/
 
 .cycle-indicator {
   width: 150px;
@@ -64,14 +49,12 @@ main {
   height: 100%;
   border-radius: 50%;
   border: 10px solid transparent;
-  border-top-color: #ff6347; /* red */
-  border-right-color: #ffa500; /* orange */
-  border-bottom-color: #1e90ff; /* blue */
-  border-left-color: #7fffd4; /* aquamarine */
+  border-top-color: #ff6347;
+  border-right-color: #ffa500;
+  border-bottom-color: #1e90ff;
+  border-left-color: #7fffd4;
   box-sizing: border-box;
 }
-
-
 
 .cycle-day {
   font-size: 36px;
@@ -88,12 +71,12 @@ main {
 }
 
 .calendar {
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin: 20px;
   background-color: white;
 }
 
@@ -154,3 +137,10 @@ main {
 .calendar-grid .luteal {
   background-color: #7fffd4;
 }
+
+
+
+  .calendar {
+    width: 100%;
+  }
+

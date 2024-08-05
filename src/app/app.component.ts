@@ -7,12 +7,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { TrackerComponent } from './tracker/tracker.component';
 import { AboutComponent } from './about/about.component';
 import { FeaturesComponent } from './features/features.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { AdonsComponent } from './adons/adons.component'; 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, WelcomeComponent, HomeComponent, LoginComponent, ProfileComponent,RouterModule, TrackerComponent, AboutComponent, FeaturesComponent],
+  imports: [RouterOutlet, WelcomeComponent, AdonsComponent, HomeComponent, LoginComponent, ProfileComponent,RouterModule, TrackerComponent, AboutComponent, FeaturesComponent, MatDialogModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
