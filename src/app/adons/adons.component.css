@@ -1,0 +1,21 @@
+.popover-content {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 16px;
+    background-color: #fff;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  .form-section h3 {
+    margin-top: 0;
+    font-size: 14px; /* Smaller font size for questions */
+  }
+  
+  .form-option {
+    margin: 5px 0;
+  }
+  
+  
