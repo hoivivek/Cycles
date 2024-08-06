@@ -6,6 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { TrackerComponent } from './tracker/tracker.component';
 import { AboutComponent } from './about/about.component';
 import { FeaturesComponent } from './features/features.component';
+import { PregnancyTrackerComponent } from './pregnancy-tracker/pregnancy-tracker.component';
 
 
 
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'profile', component: ProfileComponent},
   { path: 'tracker', component: TrackerComponent},
   { path: 'about', component: AboutComponent},
-  { path: 'features', component: FeaturesComponent}
+  { path: 'features', component: FeaturesComponent},
+  { path: 'pregnancy-tracker', component: PregnancyTrackerComponent}
 ];
 

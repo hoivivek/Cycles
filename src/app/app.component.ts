@@ -9,11 +9,12 @@ import { AboutComponent } from './about/about.component';
 import { FeaturesComponent } from './features/features.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AdonsComponent } from './adons/adons.component'; 
+import { PregnancyTrackerComponent } from './pregnancy-tracker/pregnancy-tracker.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, WelcomeComponent, AdonsComponent, HomeComponent, LoginComponent, ProfileComponent,RouterModule, TrackerComponent, AboutComponent, FeaturesComponent, MatDialogModule],
+  imports: [RouterOutlet, WelcomeComponent, PregnancyTrackerComponent, AdonsComponent, HomeComponent, LoginComponent, ProfileComponent,RouterModule, TrackerComponent, AboutComponent, FeaturesComponent, MatDialogModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

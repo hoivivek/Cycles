@@ -2,17 +2,15 @@ import { Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { AdonsComponent } from '../adons/adons.component';
-import { RouterOutlet, Routes, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-tracker',
+  selector: 'app-pregnancy-tracker',
   standalone: true,
-  imports: [CommonModule, RouterModule, RouterOutlet],
-  templateUrl: './tracker.component.html',
-  styleUrls: ['./tracker.component.css']
+  imports: [CommonModule],
+  templateUrl: './pregnancy-tracker.component.html',
+  styleUrl: './pregnancy-tracker.component.css'
 })
-
-export class TrackerComponent implements OnInit {
+export class PregnancyTrackerComponent implements OnInit{
   currentMonth: number;
   currentYear: number;
   monthNames: string[];
@@ -82,5 +80,4 @@ export class TrackerComponent implements OnInit {
   openPopover(): void {
     this.dialog.open(AdonsComponent);
   }
-
 }
