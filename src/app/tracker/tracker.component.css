@@ -35,8 +35,8 @@ h2 {
 }
 
 .cycle-indicator {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   position: relative;
   background: white;
   border-radius: 50%;
@@ -63,7 +63,7 @@ h2 {
 }
 
 .cycle-day {
-  font-size: 36px;
+  font-size: 18px;
 }
 
 .today-button {
@@ -126,27 +126,98 @@ h2 {
 
 .calendar-grid .empty {
   visibility: hidden;
+  width: 50px;
+  height: 50px;
 }
 
 .calendar-grid .menstrual {
   background-color: #ff6347;
+  width: 50px;
+  height: 50px;
 }
 
 .calendar-grid .follicular {
   background-color: #ffa500;
+  width: 50px;
+  height: 50px;
 }
 
 .calendar-grid .ovulation {
   background-color: #1e90ff;
+  width: 50px;
+  height: 50px;
 }
 
 .calendar-grid .luteal {
   background-color: #7fffd4;
+  width: 50px;
+  height: 50px;
 }
 
 
 
-  .calendar {
+  /*.calendar {
     width: 100%;
   }
+
+/* Existing styles */
+
+.calendar-grid .selected {
+  border: 2px solid black; /* Add a border to the selected day */
+  width: 50px;
+  height: 50px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  margin-right: 10px;
+}
+
+.input-group input {
+  padding: 5px;
+}
+
+.tip-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.tip-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #888;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  z-index: 1000;
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.tip-popup-content {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
 
