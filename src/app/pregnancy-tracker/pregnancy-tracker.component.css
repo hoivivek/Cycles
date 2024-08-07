@@ -120,10 +120,10 @@ main {
     font-weight: bold;
   }
   
-  .calendar-grid .empty {
+  /* .calendar-grid .empty {
     visibility: hidden;
   }
-  
+   */
 
   
   
@@ -133,3 +133,29 @@ main {
     }
   
   
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+    
+    .day-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+    }
+    
+
+    .circle {
+     
+      height: 55px;
+      border-radius: 50%;
+      position: absolute;
+      opacity: 40%;
+      bottom: 5px;
+      right: 5px;
+    }
+   
