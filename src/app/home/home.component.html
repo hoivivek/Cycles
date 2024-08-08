@@ -2,26 +2,26 @@
   <div class="signup-container">
     <div class="form-container">
       <h4>New? Sign Up for FREE</h4>
-      <form>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label for="firstName" class="form-label">First Name</label>
-          <input type="text" class="form-control form-control-sm" id="firstName" placeholder="First Name">
+          <input formControlName="firstName" type="text" class="form-control form-control-sm" id="firstName" placeholder="First Name">
         </div>
         <div class="mb-3">
           <label for="lastName" class="form-label">Last Name</label>
-          <input type="text" class="form-control form-control-sm" id="lastName" placeholder="Last Name">
+          <input formControlName="lastName" type="text" class="form-control form-control-sm" id="lastName" placeholder="Last Name">
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="name@example.com">
+          <label for="email" class="form-label">Email address</label>
+          <input formControlName="email" type="email" class="form-control form-control-sm" id="email" placeholder="name@example.com">
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Create Password</label>
-          <input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
+          <label for="password" class="form-label">Create Password</label>
+          <input formControlName="password" type="password" class="form-control form-control-sm" id="password">
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
-          <input type="password" class="form-control form-control-sm" id="exampleInputPassword2">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input formControlName="confirmPassword" type="password" class="form-control form-control-sm" id="confirmPassword">
         </div>
         <button type="submit" class="btn btn-primary btn-sm">Sign Up</button>
       </form>
@@ -30,7 +30,7 @@
       <h4>OR</h4>
     </div>
     <div class="login-container">
-      <p> <b>Already a user? </b><button type="submit" class="btn btn-primary btn-sm" [routerLink]="['/login']" routerLinkActive="router-link-active">Login</button></p>
+      <p><b>Already a user? </b><button class="btn btn-primary btn-sm" [routerLink]="['/login']">Login</button></p>
     </div>
   </div>
 </main>
