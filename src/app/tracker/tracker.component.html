@@ -7,7 +7,7 @@
     <div class="left-panel">
       <div class="cycle-indicator">
         <div class="cycle-day"> <b>Day : </b>{{ selectedDay ? dayInCycle(selectedDay) : '' }}</div>
-        <div class="cycle-stage"><b>Stage : </b>{{ selectedDay ? getStage(dayInCycle(selectedDay)) : '' }}</div>
+        <div class="cycle-stage"><b>Phase : </b>{{ selectedDay ? getStage(dayInCycle(selectedDay)) : '' }}</div>
       </div>
       <button class="tip-button" (click)="showTip()">Need a Tip?</button>
       <div class="input-group">
