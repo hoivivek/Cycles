@@ -220,4 +220,24 @@ h2 {
 
 
 
+.tip-button, .calculate-button, .today-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
+.tip-button {
+  background-color: green;
+  color: white;
+}
+
+.calculate-button {
+  background-color: tan;
+  color: black;
+}
+
+.today-button {
+  background-color: lightblue;
+  color: black;
+}

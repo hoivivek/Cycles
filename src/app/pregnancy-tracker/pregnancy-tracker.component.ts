@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { AdonsComponent } from '../adons/adons.component';
 import { FormsModule } from '@angular/forms';
+import { RouterOutlet, Routes, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-pregnancy-tracker',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule, RouterOutlet],
   templateUrl: './pregnancy-tracker.component.html',
   styleUrls: ['./pregnancy-tracker.component.css']
 })
@@ -26,6 +27,7 @@ export class PregnancyTrackerComponent implements OnInit {
   conceptionDate: Date | null;
   conceptionDateString: string;
   conceptionDateVisible: boolean;
+
 
   constructor(public dialog: MatDialog) {
     this.currentMonth = new Date().getMonth();
@@ -190,10 +192,23 @@ export class PregnancyTrackerComponent implements OnInit {
   }
 
 
-
   closeTip(): void {
     this.tipVisible = false;
   }
+
+  getWeekImage(weekInPregnancy: number): string {
+    
+  
+    switch (weekInPregnancy) {
+      case 1:
+        return '/src/assets/images/apple_week15.png';
+      case 2:
+        return '/src/assets/images/avocado_week16.png';
+      default:
+        return '/src/assets/images/avocado_week16.png'; 
+    }
+  }
+  
 
   getPregnancyStage(weekInPregnancy: number): string {
 

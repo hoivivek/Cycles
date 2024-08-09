@@ -11,6 +11,13 @@ h2 {
   margin-bottom: 20px;
 }
 
+
+.menstrual-button{
+  position: absolute;
+  top: 75px;
+  right: 20px;
+}
+
 .content {
   display: flex;
   justify-content: center;
@@ -28,11 +35,7 @@ h2 {
   margin: 20px;
 }
 
-.pregnancy-button{
-  position: absolute;
-  top: 75px;
-  right: 20px;
-}
+
 
 .cycle-indicator {
   width: 250px;
@@ -62,11 +65,9 @@ h2 {
   box-sizing: border-box;
 }
 
-.cycle-day {
-  font-size: 18px;
-}
 
-.today-button {
+
+/*.today-button {
   padding: 10px 50px;
   background-color: skyblue;
   border-radius: 10px;
@@ -74,7 +75,7 @@ h2 {
   font-size: 18px;
   cursor: pointer;
   margin-bottom: 25px;
-}
+}*/
 
 .calendar {
   width: 100%;
@@ -162,7 +163,7 @@ h2 {
   height: 50px;
 }
 
-.calculate-button{
+/*.calculate-button{
   background-color: burlywood;
   color: white;
   border: none;
@@ -171,7 +172,7 @@ h2 {
   cursor: pointer;
   font-size: 14px;
   margin-top: 10px;
-}
+}*/
 
 .input-group {
   margin-bottom: 20px;
@@ -185,7 +186,7 @@ h2 {
   padding: 5px;
 }
 
-.tip-button {
+/*.tip-button {
   background-color: #4caf50;
   color: white;
   border: none;
@@ -194,7 +195,7 @@ h2 {
   cursor: pointer;
   font-size: 14px;
   margin-top: 10px;
-}
+}*/
 
 .tip-popup {
   position: fixed;
@@ -213,6 +214,23 @@ h2 {
 
 .tip-popup-content {
   position: relative;
+}
+
+
+/*.tip-popup-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
+}*/
+
+.week-image {
+  width: 50%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
 .close-btn {
@@ -264,10 +282,30 @@ h2 {
 }
 
 .cycle-week {
-  font-size: 16px;
+  font-size: 36px;
   font-weight: bold;
 }
 
+.tip-button, .calculate-button, .today-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
+.tip-button {
+  background-color: green;
+  color: white;
+}
+
+.calculate-button {
+  background-color: tan;
+  color: black;
+}
+
+.today-button {
+  background-color: lightblue;
+  color: black;
+}
 
   
