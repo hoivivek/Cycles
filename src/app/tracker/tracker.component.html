@@ -1,13 +1,18 @@
 <main>
-<H2>DAILY TRACKER</H2>
-<div class = "pregnancy-button">
-  <button type="submit" class="btn btn-primary btn-sm" [routerLink]="['/pregnancy-tracker']">Pregnacy mode</button>
-</div>
+  <h2>DAILY TRACKER</h2>
+  <div class="pregnancy-button">
+    <button type="submit" class="btn btn-primary btn-sm" [routerLink]="['/pregnancy-tracker']">Pregnancy mode</button>
+  </div>
   <div class="content">
     <div class="left-panel">
       <div class="cycle-indicator">
-        <div class="cycle-day"></div>
-        <div class="cycle-stage"></div>
+        <div class="cycle-day"> <b>Day : </b>{{ selectedDay ? dayInCycle(selectedDay) : '' }}</div>
+        <div class="cycle-stage"><b>Phase : </b>{{ selectedDay ? getStage(dayInCycle(selectedDay)) : '' }}</div>
+      </div>
+      <button class="tip-button" (click)="showTip()">Need a Tip?</button>
+      <div class="input-group">
+        <label for="cycleStart">Enter Cycle Start Date:</label>
+        <input id="cycleStart" type="date" (change)="onCycleStartChange($event)">
       </div>
       <div id="todayButton" class="today-button" (click)="openPopover()">Today</div>
     </div>
@@ -26,17 +31,27 @@
         <div class="day-label">T</div>
         <div class="day-label">F</div>
         <div class="day-label">S</div>
-        <div *ngFor="let day of days" [class.empty]="day === 0" [class.menstrual]="day !== 0 && isMenstrual(day)" [class.follicular]="day !== 0 && isFollicular(day)" [class.ovulation]="day !== 0 && isOvulation(day)" [class.luteal]="day !== 0 && isLuteal(day)">
+        <div *ngFor="let day of days" 
+             [class.empty]="day === 0" 
+             [class.menstrual]="isStage(day, 'Menstrual')" 
+             [class.follicular]="isStage(day, 'Follicular')" 
+             [class.ovulation]="isStage(day, 'Ovulation')" 
+             [class.luteal]="isStage(day, 'Luteal')" 
+             [class.selected]="day === selectedDay"
+             (click)="onDaySelect(day)">
           {{ day !== 0 ? day : '' }}
         </div>
       </div>
     </div>
   </div>
+<!-- Custom pop-up for tips -->
+<div class="tip-popup" *ngIf="tipVisible">
+  <div class="tip-popup-content">
+    <span class="close-btn" (click)="closeTip()">&times;</span>
+    <h4>Tip for Day : {{ selectedDay ? dayInCycle(selectedDay) : '' }}</h4>
+    <p>Tip : {{tip}}</p>
+  </div>
+</div>
 
- 
-  
+
 </main>
-
-
-
-
