@@ -130,17 +130,17 @@ input:checked + label .desc {
 
 .card[for="c1"] {
  
-  background-image: url(../../assets/images/IMG_0152.jpg);
+  background-image: url(../../assets/images/4phases.jpg);
 }
 
 .card[for="c2"] {
  
-  background-image: url(../../assets/images/IMG_0153.jpg);
+  background-image: url(../../assets/images/pregstages.jpg);
 }
 
 .card[for="c3"] {
  
-  background-image: url(../../assets/images/IMG_0154.jpg);
+  background-image: url(../../assets/images/scigal.jpg);
 }
 
 @media screen and (max-width: 1200px) {
