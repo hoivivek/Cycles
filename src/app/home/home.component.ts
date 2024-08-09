@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ReactiveFormsModule, HttpClientModule, RouterModule],
+  imports: [ReactiveFormsModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -35,18 +34,27 @@ export class HomeComponent implements OnInit {
     if (this.signupForm.valid) {
       const formData = this.signupForm.value;
 
-      this.http.post('/api/register', formData).subscribe(
-        response => {
+      this.http.post('/api/register', formData).subscribe({
+        next: response => {
           console.log('User registered successfully', response);
           this.router.navigate(['/login']);
         },
-        error => {
-          console.error('Error occurred while registering user', error);
-          alert('Registration failed: ' + (error.error?.message || 'Unknown error'));
+        error: error => {
+          if (error.status === 0) {
+            console.error('Network error or server is unreachable', error);
+            alert('Network error or server is unreachable. Please try again later.');
+          } else if (typeof error.error === 'string' && error.error.startsWith('<!DOCTYPE')) {
+            console.error('Unexpected response format', error);
+            alert('Registration failed: Unexpected response from the server.');
+          } else {
+            console.error('Error occurred while registering user', error);
+            alert('Registration failed: ' + (error.error?.message || 'Unknown error'));
+          }
         }
-      );
+      });
     } else {
       console.warn('Form is invalid');
     }
   }
 }
+
