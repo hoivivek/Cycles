@@ -1,3 +1,10 @@
+# Summary 
+Cycles is a web application created to provide personalized and easy access information to women on their menstruation cycle phases and pregnancy weeks. This application is a combination of tracking both menstruation phases and pregnancy which gives detailed daily insights for menstruation across all four phases and weekly updates for pregnancy. 
+
+Compared with many other similar apps that require paid subscription, this app offers free services making essential tracking tools accessible to a wider audience, regardless of any financial status. This app also offers personalized data, understanding the information of user’s unique situation which can aid in better decision making and health management. 
+
+The technologies used for developing this application involve Angular Framework for Frontend, Python with Flask for backend and Azure SQL Database for Database. Using Angular for Frontend is a scalable framework for building dynamic applications. It has a two-way data binding feature which provides real-time updates between the User Interface (UI) and the data model, which is crucial for our application that needs to provide timely and accurate information to the users. Using Python with Flask in Backend is ideal for managing and processing data and is also compatible with various databases and APIs, providing the necessary functionality for the backend. The use of Azure SQL DB has potential for data storage that offers scalability and high performance which are essential for handling
+
 # Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
